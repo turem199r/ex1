@@ -26,7 +26,7 @@ list* removeFromList(list* first)
 void pop(list* first, int place)
 {
 	int i = 0;
-	for (i = 0; i < place - 1; i++)
+	for (i = 1; i < place - 1; i++)
 	{
 		first = first->next;
 	}
@@ -40,10 +40,10 @@ void initList(list* first, unsigned int size)
 	for (i = 1; i <= size; i++)
 	{
 		first->numInList = i;
+		first->next = new list;
 		first = first->next;
 	}
 	first->next = NULL;
-	first = firstNode;
 }
 
 void cleanList(list* first)
@@ -56,4 +56,5 @@ void cleanList(list* first)
 		prev = first;
 		first = first->next;
 	}
+	delete first;
 }

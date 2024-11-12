@@ -1,7 +1,8 @@
+#include "LinkedList.h"
 #pragma once
 #ifndef UI
 #define UI
 
-void menu();
+void printList(list* first);
 
 #endif // !UI

@@ -1,7 +1,11 @@
 #include <iostream>
 #include "UI.h"
 
-void menu()
+void printList(list* first)
 {
-
+	while (first->next != NULL)
+	{
+		std::cout << first->numInList << std::endl;
+		first = first->next;
+	}
 }
