@@ -41,7 +41,7 @@ int dequeue(Queue* q)
 
 bool isEmpty(Queue* s)
 {
-	if (s != NULL)
+	if (s == NULL)
 	{
 		return true;
 	}
@@ -53,5 +53,12 @@ bool isEmpty(Queue* s)
 
 bool isFull(Queue* s)
 {
-	
+	if (!isEmpty(s))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
