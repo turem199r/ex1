@@ -1,6 +1,6 @@
 #pragma once
-#ifndef linkedListBuild
-#define linkedListBuild
+#ifndef linkedList
+#define linkedList
 
 typedef struct list
 {
@@ -11,4 +11,7 @@ typedef struct list
 list* addToList(list* first);// adding to the head of the list
 list* removeFromList(list* first);// removing the head of the list
 
+void pop(list* first, int place);
+void initList(list* first, unsigned int size);
+void cleanList(list* first);
 #endif // !linkedListBuild
