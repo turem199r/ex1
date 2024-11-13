@@ -3,7 +3,18 @@
 
 void initQueue(Queue* q, unsigned int size)
 {
-	q = new Queue[size];
+	Queue* start = q;
+	q = new Queue;
+	int i = 0;
+	for (i = 0; i < size; i++)
+	{
+		q->queueNum = i;
+		q = q->nextPerson;
+		q = new Queue;
+	}
+	q->nextPerson = NULL;
+	q = start;
+	delete start;
 }
 
 void cleanQueue(Queue* q)
@@ -17,6 +28,7 @@ void cleanQueue(Queue* q)
 		q = nextP;
 	}
 	std::cout << "Queue was cleaned\n";
+	delete nextP;
 }
 
 void enqueue(Queue* q, unsigned int newValue)

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Queue.h"
+#include "UI.h"
 
 int main()
 {
@@ -8,6 +9,7 @@ int main()
 	bool empty = false;
 	bool full = false;
 	initQueue(first, 3);
+	printList(first, 3);
 	enqueue(first, 1);
 	element = dequeue(first);
 	empty = isEmpty(first);
